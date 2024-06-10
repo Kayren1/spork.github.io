@@ -1,6 +1,7 @@
 - 👋 Hi, I’m @Kayren1
 - 👀 I’m interested in Programming
 - 🌱 I’m currently learning Web Programming with Python and JavaScript
+- ✨ Im also a frontend developer at frontendmentor.io...
 - 💞️ I’m looking to collaborate on interactive web applications
 - 📫 How to reach me Allistersenzo@gmail.com...
 
