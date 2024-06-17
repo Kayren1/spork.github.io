@@ -1,0 +1,58 @@
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto Mono", monospace;
+  background-color: hsl(212, 45%, 89%);
+  line-height: 1.5;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrcards {
+  width: 300px;
+  aspect-ratio: 1/1.4;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 100%);
+  padding: 15px;
+  margin-top: 5rem;
+  border-radius: 20px;
+  text-align: center;
+  /*box-shadow: 0 10px 30px 0px;*/
+}
+
+.qrcard, .qrimg {
+  border-radius: 20px;
+  width: 300px;
+  height: 300px;
+  cursor: pointer;
+}
+
+.qrcard, .qrimg1 {
+  border-radius: 100%;
+}
+
+.qrcards, h2 {
+  font-size: 1.125rem;
+  color: hsl(218, 44%, 22%);
+}
+
+.qrcards, p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: hsl(220, 15%, 55%);
+  margin-bottom: 2.5rem;
+}
+
+.attribution {
+  text-align: center;
+  position: fixed;
+  bottom: 0%;
+}/*# sourceMappingURL=styles.css.map */
