@@ -18,6 +18,7 @@ $font-lg:1.3125rem; // 21px
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    height: 1100px;
 }
 
 body {
@@ -51,9 +52,9 @@ body {
     cursor: pointer;
 }
 
-.qrcard, .qrimg1 {
+/*.qrcard, .qrimg1 {
     border-radius: 100%;
-}
+}*/
 
 .qrcards, h2 {
     font-size: $font-med;
@@ -69,6 +70,7 @@ body {
 
 .attribution {
     text-align: center;
-    position: fixed;
+    position: absolute;
+    top: 900px;
     bottom: 0%;
 }

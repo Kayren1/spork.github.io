@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  height: 1100px;
 }
 
 body {
@@ -35,10 +36,9 @@ body {
   cursor: pointer;
 }
 
-.qrcard, .qrimg1 {
-  border-radius: 100%;
-}
-
+/*.qrcard, .qrimg1 {
+    border-radius: 100%;
+}*/
 .qrcards, h2 {
   font-size: 1.125rem;
   color: hsl(218, 44%, 22%);
@@ -53,6 +53,7 @@ body {
 
 .attribution {
   text-align: center;
-  position: fixed;
+  position: absolute;
+  top: 900px;
   bottom: 0%;
 }/*# sourceMappingURL=styles.css.map */
