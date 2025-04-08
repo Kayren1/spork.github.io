@@ -2,75 +2,124 @@
 
 // Colors
 
-$White: hsl(0, 0%, 100%);
-$Lightgray: hsl(212, 45%, 89%);
-$Grayishblue: hsl(220, 15%, 55%);
-$Darkblue: hsl(218, 44%, 22%);
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
 
 // Font Sizes
 
-$font-sm:0.875rem; // 14px
-$font-med:1.125rem; // 18px
-$font-lg:1.3125rem; // 21px
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.3125rem; // 21px
 
 
 :root {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    height: 1100px;
+    /* height: 1100px; Removed as it is unnecessary */
 }
 
 body {
     display: flex;
     flex-direction: column;
     font-family: "Roboto Mono", monospace;
-    background-color: $Lightgray;
+    background-color: $light-gray;
     line-height: 1.5;
-    padding: 20px;
+    padding: 1.25rem;
     justify-content: center;
     align-items: center;
 }
 
-.qrcards {
+.container {
     width: 300px;
+    height: 550px;
+    // Maintain a specific design ratio for the container
     aspect-ratio: 1 / 1.4;
     display: flex;
     flex-direction: column;
-    background-color: $White;
+    background-color: $white;
     padding: 15px;
     margin-top: 5rem;
     border-radius: 20px;
     text-align: center;
-    /*box-shadow: 0 10px 30px 0px;*/
 }
 
-.qrcard, .qrimg {
+.card {
     border-radius: 20px;
+    margin-bottom: 40px;
     width: 300px;
     height: 300px;
+    font-size: $font-med;
+    color: $dark-blue;
     cursor: pointer;
 }
 
-/*.qrcard, .qrimg1 {
-    border-radius: 100%;
-}*/
-
-.qrcards, h2 {
-    font-size: $font-med;
-    color: $Darkblue;
+img {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
 }
 
-.qrcards, p {
+.cards {
+    font-size: $font-med;
+    color: $dark-blue;
+}
+
+.container h2 {
+    font-size: $font-med;
+    color: $dark-blue;
+}
+
+
+.card, h2 {
+    font-size: $font-med;
+    color: $dark-blue;
+}
+
+.card, p {
     font-size: $font-sm;
     font-weight: 300;
-    color: $Grayishblue;
+    color: $grayish-blue;
     margin-bottom: 2.5rem;
 }
 
 .attribution {
     text-align: center;
+    font-size: $font-sm;
+    color: $grayish-blue;
     position: absolute;
-    top: 900px;
     bottom: 0%;
 }
+
+
+// Responsive styles for smaller screens
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+        margin-top: 0;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cards, h2 {
+        font-size: $font-lg;
+    }
+    .attribution {
+        margin-top: 5rem; // Scalable unit for margin
+        position: relative;
+        font-size: $font-sm;
+    }
+} 
