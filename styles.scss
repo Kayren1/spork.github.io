@@ -5,7 +5,7 @@
 $white: hsl(0, 0%, 100%);
 $light-gray: hsl(212, 45%, 89%);
 $grayish-blue: hsl(220, 15%, 55%);
-$dark-blue: hsl(218, 44%, 22%);
+$dark-blue: hsl(217, 45%, 24%);
 
 // Font Sizes
 
@@ -21,10 +21,14 @@ $font-lg: 1.3125rem; // 21px
 }
 
 body {
+    display: block;
+    background-color: $light-gray;
+}
+
+main {
     display: flex;
     flex-direction: column;
     font-family: "Roboto Mono", monospace;
-    background-color: $light-gray;
     line-height: 1.5;
     padding: 1.25rem;
     justify-content: center;
@@ -33,7 +37,7 @@ body {
 
 .container {
     width: 300px;
-    height: 550px;
+    height: 520px;
     aspect-ratio: 1 / 1.4;
     display: flex;
     flex-direction: column;
@@ -60,23 +64,13 @@ img {
     height: 300px;
 }
 
-.cards {
+h1 {
     font-size: $font-med;
     color: $dark-blue;
+    margin-top: 1.5rem;
 }
 
-.container h2 {
-    font-size: $font-med;
-    color: $dark-blue;
-}
-
-
-.card, h2 {
-    font-size: $font-med;
-    color: $dark-blue;
-}
-
-.card, p {
+p {
     font-size: $font-sm;
     font-weight: 300;
     color: $grayish-blue;
@@ -87,18 +81,21 @@ img {
     text-align: center;
     font-size: $font-sm;
     color: $grayish-blue;
-    position: absolute;
-    bottom: 0%;
+
 }
 
+footer {
+    margin-top: 5rem;
+    position: relative;
+    top: 100%;
+}
 
 // Responsive styles for smaller screens
 @media screen and (max-width: 768px) {
     .container {
-        width: 100%;
-        height: 100%;
         padding: 10px;
         margin-top: 0;
+        height: 570px;
     }
 
     .card {
@@ -115,9 +112,8 @@ img {
     .cards, h2 {
         font-size: $font-lg;
     }
-    .attribution {
-        margin-top: 5rem; // Scalable unit for margin
-        position: relative;
+
+    footer {
         font-size: $font-sm;
     }
 } 
