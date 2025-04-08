@@ -18,7 +18,6 @@ $font-lg: 1.3125rem; // 21px
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* height: 1100px; Removed as it is unnecessary */
 }
 
 body {
@@ -35,7 +34,6 @@ body {
 .container {
     width: 300px;
     height: 550px;
-    // Maintain a specific design ratio for the container
     aspect-ratio: 1 / 1.4;
     display: flex;
     flex-direction: column;
