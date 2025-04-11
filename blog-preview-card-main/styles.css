@@ -61,12 +61,21 @@ main {
   border: 1px solid black;
   border-radius: 15px;
   text-align: left;
+  position: relative;
+  bottom: 5px;
+  right: 5px;
 }
 
 .card:hover {
   position: relative;
-  bottom: 5px;
-  right: 5px;
+  bottom: 0px;
+  right: 0px;
+}
+
+.card, .blog-title h1:hover {
+  color: hsl(47, 88%, 63%);
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
 }
 
 .card-shadow {
