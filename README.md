@@ -6,7 +6,7 @@
 - 📫 How to reach me Allistersenzo@gmail.com...
 
 Frontend Mentor Challenge
-- https://kayren1.github.io/spork.github.io/qrcode.html
+- https://kayren1.github.io/spork.github.io/qr-code-component/qrcode.html
 
 <!---
 Kayren1/Kayren1 is a ✨ special ✨ repository made for frontend learning and because its `README.md` (this file) appears on your GitHub profile.
