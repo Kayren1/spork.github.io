@@ -1,0 +1,213 @@
+// Colors
+$White: hsl(0, 0%, 100%);
+$Gold-yellow: hsl(47, 88%, 63%);
+$Dim-Gray: hsl(0, 0%, 42%);
+$Dark-Gray: hsl(0, 0%, 7%);
+$Dark-Violet: hsl(283, 51%, 48%);
+$grayish-blue: hsl(228, 45%, 44%);
+
+// Font Sizes
+$font-sm: 0.875rem; // 14px
+$font-med: 1rem; // 16px
+$font-lg: 1.1875rem; // 19px
+
+
+// Font Family
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/static/Figtree-Medium.ttf') format('truetype');
+    font-weight: 200;
+    font-style: small;
+}
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: regular;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/static/Figtree-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: ExtraBold;
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: block;
+    background-color: $Gold-yellow;
+    font-family: 'Figtree', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'figtree';
+    width: 100%;
+    height: 100vh;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    height: 430px;
+    background-color: $White;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.card:hover {
+    position: relative;
+    bottom: 5px;
+    right: 5px;
+}
+
+.card-shadow {
+    width: 310px;
+    height: 430px;
+    border-radius: 15px;
+    background-color: black;
+}
+.blog-img {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.blog-img img {
+    border-radius: 10px;
+    width: 280px;
+}
+
+.blog-title h1 {
+    font-size: $font-lg;
+    font-style: ExtraBold;
+    color: $Dark-Gray;
+    margin-bottom: 10px;
+}
+
+.blog-category h3 {
+    font-size: $font-sm;
+    color: $Dark-Gray;
+    padding: 4px
+}
+
+.blog-category {
+    background-color: $Gold-yellow;
+    text-align: center;
+    width: 80px;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.blog-category:hover{
+    box-shadow: 0.5px 0.5px 2px $Dim-Gray;
+    color: $White;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.blog-author h2 {
+    padding-left: 10px;
+    font-size: $font-sm;
+    color: $Dark-Gray;
+}
+
+.blog-status p {
+    font-size: $font-sm;
+    font-weight: 300;
+    color: $Dark-Gray;
+    margin-bottom: 10px;
+}
+
+.blog-info p {
+    font-size: $font-sm;
+    font-weight: 500;
+    color: $Dim-Gray;
+    margin-bottom: 1rem;
+}
+
+.blog-author {
+    display: flex;
+    align-items: center;
+}
+
+.blog-author img {
+    width: 30px;
+    height: 30px;
+}
+
+.attribution {
+    font-size: $font-sm;
+    text-align: center;
+}
+
+.attribution a:visited {
+    color: $Dark-Violet;
+}
+
+a {
+    color: $Dark-Gray;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+footer {
+    margin-top: 5rem;
+    position: relative;
+    top: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%;
+    }
+
+    .card {
+        height: auto;
+        padding: 10px;
+    }
+
+    .card-shadow {
+        height: auto;
+    }
+
+    .blog-img img {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 5rem;
+        position: relative;
+        top: 100%;
+    }
+    
+    .blog-title h1 {
+        font-size: $font-med;
+    }
+    
+}
