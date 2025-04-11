@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Screenshot of the solution](./preview.jpg)
+![Screenshot of the solution](./Screenshot%20(1).png)
 
 ### Links
 
