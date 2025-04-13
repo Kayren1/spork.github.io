@@ -82,6 +82,17 @@ input {
   width: 400px;
   padding: 15px;
   margin-bottom: 30px;
+  background-color: hsl(0, 0%, 100%);
+  opacity: 20%;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 10px;
+}
+
+button {
+  background-color: #ee5f0c;
+  padding: 10px;
+  border: 0;
+  border-radius: 10px;
 }
 
 .ticket {
