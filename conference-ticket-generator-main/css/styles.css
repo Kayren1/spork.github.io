@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.squiggly-1 {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+
+.squiggly-2 {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+}
+
+.bg-circle1 {
+  position: absolute;
+  bottom: 90%;
+  left: 10%;
+}
+
+.bg-circle2 {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+}
+
+body {
+  background: url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/background-desktop.png) center/cover no-repeat;
+  font-family: "Figtree", sans-serif;
+  line-height: 1.5;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  body {
+    background: url(/conference-ticket-generator-main/assets/images/background-tablet.png) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    background: url(/conference-ticket-generator-main/assets/images/background-mobile.png) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headline {
+  text-align: center;
+  line-height: 2;
+  color: hsl(0, 0%, 100%);
+}
+
+.logo {
+  padding: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  color: hsl(0, 0%, 100%);
+}
+
+input {
+  width: 400px;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "figtree";
+  width: 100vw;
+  height: 100vh;
+  line-height: 1.5;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.attribution {
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.attribution a:visited {
+  color: hsl(283, 51%, 48%);
+}
+
+a {
+  color: hsl(0, 0%, 7%);
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+
+footer {
+  margin-top: 5rem;
+  position: relative;
+  top: 100%;
+  z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    width: 100%;
+  }
+  .card {
+    height: auto;
+    padding: 10px;
+  }
+  .card-shadow {
+    height: auto;
+  }
+  .blog-img img {
+    width: 100%;
+  }
+  footer {
+    margin-top: 5rem;
+    position: relative;
+    top: 100%;
+  }
+  .blog-title h1 {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
