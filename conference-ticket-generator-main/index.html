@@ -3,13 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/styles.css">
-  
   <title>Frontend Mentor | Conference ticket generator</title>
-
-  
+  <script src="./script.js"></script>
 </head>
 <body>
  
@@ -20,55 +18,73 @@
   <main>
     <section class="ticket-form">
       <div class="headline">
-        <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <h1>Your Journey to Coding Conf <br>2025 Starts Here!</h1>
         <p>Secure your spot at next year's biggest coding conference.</p>
       </div>
       <form action="" method="post">
-        <div class="form-upload">
+        <label for="">Upload Avatar</label>
+        <div class="form-upload" id="formupload">
           <div class="upload-icon">
             <img src="./assets/images/icon-upload.svg" alt="icon" id="u-ico">
+            <img id="userimage" src="" alt="user" hidden>
           </div>
-          <p id="upload-text">Drag and drop or click to upload</p>
+          <input type="file" class="get-avatar" id="avatarupload" name="avatar" accept="image/jpeg, image/png">
+          <p id="uploadtext">Drag and drop or click to upload</p>
+          <div class="avatarbtn" hidden>
+            <button type="button" id="change" onclick="">change</button>
+            <button type="reset" id="remove">remove</button>
+          </div>
         </div>
+        <span><img src="./assets/images/icon-info.svg" alt="">Upload your photo (JPG or PNG, max size: 500KB).</span>
         <label for="text">Full Name</label>
-        <input autofocus type="text" id="name">
+        <input autofocus type="text" class="get-input" id="name">
         <label for="text">Email Address</label>
-        <input autofocus type="text" id="email" placeholder="example@email.com">
+        <input autofocus required type="text" class="get-input" id="email" placeholder="example@email.com">
         <label for="text">GitHub Username</label>
-        <input autofocus type="text" id="username" placeholder="@yourusername">
-        <button type="submit">Generate My Ticket</button>
+        <input autofocus type="text" class="get-input" id="github" placeholder="@yourusername">
+        <button autofocus type="submit" class="generate">Generate My Ticket</button>
       </form>
     </section>
     <section class="ticket">
       <div class="headline">
-        <h1>Congrats, <!-- Full Name -->! Your ticket is ready.</h1>
-        <p>We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.</p>
+        <h1>Congrats, <span id="FullName"></span>! <br>Your ticket is ready.</h1>
+        <p>We've emailed your ticket to <br><span id="EmailAddress"></span>and will send updates in <br>the run up to the event.</p>
       </div>
-      <!-- Form starts -->  
-      Upload your photo (JPG or PNG, max size: 500KB).
-      
-      <!-- Form ends -->
-      
-      <!-- Generated tickets starts -->
-      Coding Conf 👍 
-      Jan 31, 2025 / Austin, TX
-      
-      <!-- Generated tickets ends -->
-      <div class="Generated-ticket">
-        <div class="ticket-card"></div>
+      <div class="ticket-container">
+        <div class="generated-ticket">
+          <div class="ticket-col-1">
+            <div class="ticket-start">
+              <div class="ticket-text">
+                <img src="./assets/images/logo-mark.svg" alt="">
+                <h2>Coding Conf</h2>
+              </div>
+              <div class="ticket-info">
+                <p>Jan 31, 2025 / Austin, TX</p>
+              </div>
+            </div>
+            <div class="ticket-end">
+              <div class="ticket-avatar">
+                <img id="userimage" src="./assets/images/image-avatar.jpg" alt="user">
+              </div>
+              <div class="ticket-user">
+                <h3 id="ticket-name">Kweku</h3>
+                <p id="getuser"><span><img src="./assets/images/icon-github.svg" alt="icon"></span>hjrthrthrthr</p>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-col-2">
+            <p>#<span class="ticket-id">------</span></p>
+          </div>
+        </div>
       </div>
       <!--<div class="bg-elements">
       </div>-->
     </section>
-    <img src="./assets/images/pattern-squiggly-line-top.svg" id="pattern" class="squiggly-1">
-    <img src="./assets/images/pattern-circle.svg" id="pattern" class="bg-circle1">
-    <img src="./assets/images/pattern-circle.svg" id="pattern" class="bg-circle2">
-    <img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" id="pattern" class="squiggly-2">
   </main>
   <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Kayren1/spork.github.io.git">Kayren</a>
+      Coded by <a href="https://github.com/Kayren1/spork.github.io.git">Kayren 👍</a>
       <p>© copyright 2025</p>
   </footer>
 </body>

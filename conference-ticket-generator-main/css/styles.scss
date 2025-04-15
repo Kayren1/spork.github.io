@@ -1,22 +1,39 @@
 
 // Colors
+$red: hsl(7, 81%, 62%);
+$White1: hsla(0, 0%, 100%, 0.788);
 $White: hsl(0, 0%, 100%);
 $Gold-yellow: hsl(251, 65%, 3%);
-$Dim-Gray: hsl(0, 0%, 42%);
+$bg-hover: hsla(0, 0%, 100%, 0.329);
 $Dark-Gray: hsl(0, 0%, 7%);
 $Dark-Violet: hsl(283, 51%, 48%);
 $grayish-blue: hsl(228, 45%, 44%);
+$primary-color: hsl(0, 0%, 100%);
+$secondary-color: hsla(0, 0%, 100%, 0.137);
+$accent-color: hsl(207, 73%, 57%);
+$border-color: hsla(0, 0%, 100%, 0.849);
 
 // Font Sizes
+$font-xxsm: 0.5rem; // 8px
+$font-xsm: 0.625rem; // 10px
 $font-sm: 0.875rem; // 14px
 $font-med: 1rem; // 16px
-$font-lg: 1.1875rem; // 19px
+$font-lg: 1.125rem; // 18px
+$font-xlg: 1.25rem; // 20px
+$font-xxlg: 1.5rem; // 24px
+$font-xxxlg: 2rem; // 24px
 
+//Background Image Var
 $bg-image-desktop: '/conference-ticket-generator-main/assets/images/background-desktop.png';
 $bg-image-tablet: '/conference-ticket-generator-main/assets/images/background-tablet.png';
 $bg-image-mobile: '/conference-ticket-generator-main/assets/images/background-mobile.png';
 $bg-image-lines: '/conference-ticket-generator-main/assets/images/pattern-lines.svg';
+$bg-image-circle: '/conference-ticket-generator-main/assets/images/pattern-circle.svg';
+$bg-image-squiggly-1: '/conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg';
+$bg-image-squiggly-2: '/conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-desktop.svg';
 
+
+//Size & Position
 $repeat: no-repeat;
 $size: center/cover;
 
@@ -24,9 +41,6 @@ $size: center/cover;
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 
-
-
-// Base and Reset
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +49,7 @@ $breakpoint-tablet: 768px;
 
 .squiggly-1 {
     position: absolute;
-    top: 0%;
+    top: 7%;
     right: 0%;
 }
 
@@ -57,16 +71,17 @@ $breakpoint-tablet: 768px;
     right: 15%;
 }
 
-
-// Base for Desktop (default)
 body {
     background: 
         url(#{$bg-image-lines}) $size $repeat,
+        url(#{$bg-image-circle}) $repeat 35px -95px,
+        url(#{$bg-image-circle}) $repeat 82% 60%,
+        url(#{$bg-image-squiggly-1}) $repeat 100% 10%,
+        url(#{$bg-image-squiggly-2}) $repeat 0 100%,
         url(#{$bg-image-desktop}) $size $repeat;
-    font-family: 'Figtree', sans-serif;
-    line-height: 1.5;
-    width: 100%;
-    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    line-height: 1.5;;
 }
 
 // Override for Tablet
@@ -87,6 +102,17 @@ body {
     }
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: 'figtree';
+    width: 100vw;
+    height: 87vh;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
 header {
     display: flex;
     align-items: center;
@@ -97,13 +123,22 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .headline {
     text-align: center;
-    line-height: 2;
-    color: $White;
+    margin-bottom: 30px;
+    line-height: 1.2;
+    h1 {
+        font-size: 54px;
+    }
+
+    p {
+        padding: 15px;
+        font-size: 24px;
+    }
 }
 
 .logo {
@@ -113,33 +148,187 @@ header {
 form {
     display: flex;
     flex-direction: column;
+    span{
+        font-size: $font-xsm;
+        margin-bottom: 40px;
+        img {
+            position: relative;
+            top: 2.2px;
+        }
+    }
+    .get-input {
+        width: 400px;
+        padding: 15px;
+        margin-bottom: 30px;
+        background-color: $secondary-color;
+        backdrop-filter: blur(1px);
+        border: 1px solid $border-color;
+        border-radius: 10px;
+        &:hover {
+            outline: 2px solid $White1;
+            background-color: $bg-hover;
+        }
+    }
+    .generate {
+        background-color: $red;
+        padding: 15px;
+        border: 0;
+        border-radius: 10px;
+        &:hover {
+            background: darken($red, 5%);
+            cursor: pointer;
+        }
+        &:focus {
+            outline: 1px solid $White1;
+            box-shadow: 0 0 3px 2px rgba(0,123,255,0.5);
+        }
+    }
+}
+
+.form-upload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+    border-radius: 10px;
+    background-color: $secondary-color;
+    backdrop-filter: blur(1px);
+    border: 1px dashed $White1;
+    width: 400px;
+    height: 130px;
+    .get-avatar[type="file"] {
+        display: none;
+    }
+    &:hover {
+        background-color: $bg-hover;
+    }
+    &:focus {
+        outline: 1px solid $White1;
+    }
+}
+
+.upload-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    background-color: lighten($secondary-color, 50%);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+.avatar-preview {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+    margin: 0 auto 1rem;
 }
 
 label {
-    color: $White;
+    padding: 5px 0;
 }
 
-input {
-    width: 400px;
-    padding: 15px;
-    margin-bottom: 30px;
+
+.get-input::placeholder {
+    color: $White;
+    opacity: 0.5;
 }
+
+
+
 
 .ticket{
-    display: flex;
+    display: none;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
 }
 
-main {
+.generated-ticket {
+    display: flex;
+    justify-content: space-between;
+    background: url('/conference-ticket-generator-main/assets/images/pattern-ticket.svg') $size $repeat;
+    width: 600px;
+    height: 280px;
+    padding: 25px;
+}
+
+.ticket-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50%;
+}
+
+.ticket-col-1 {
     display: flex;
     flex-direction: column;
-    font-family: 'figtree';
-    width: 100vw;
-    height: 100vh;
-    line-height: 1.5;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.ticket-col-2 {
+    display: flex;
+    font-size: $font-lg;
+    width: 50px;
+    text-align: center;
+    color: $White1;
+    p{
+        writing-mode: vertical-lr;
+        transform: rotate(0deg);
+    }
+}
+
+.ticket-text{
+    display: flex;
+    h2 {
+        padding-left: 20px;
+    }
+
+}
+.ticket-avatar {
+    width: 75px;
+    height: 75px;
+    img {
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+}
+.ticket-info{
+    line-height: 1;
+    p {
+        padding-left: 60px;
+    }
+}
+
+.ticket-end {
+    display: flex;
+}
+
+.ticket-user {
+    margin-left: 15px;
+    h3 {
+        padding: 5px;
+    }
+    p {
+        text-align: center;
+    }
+    img {
+        position: relative;
+        padding-right: 5px;
+        top: 5px;
+    }
 }
 
 .attribution {
@@ -158,38 +347,7 @@ a {
 }
 
 footer {
-    margin-top: 5rem;
     position: relative;
-    top: 100%;
-    z-index: 2;
+    top: 90%;
 }
 
-@media screen and (max-width: 768px) {
-    main {
-        width: 100%;
-    }
-
-    .card {
-        height: auto;
-        padding: 10px;
-    }
-
-    .card-shadow {
-        height: auto;
-    }
-
-    .blog-img img {
-        width: 100%;
-    }
-
-    footer {
-        margin-top: 5rem;
-        position: relative;
-        top: 100%;
-    }
-    
-    .blog-title h1 {
-        font-size: $font-med;
-    }
-    
-}
