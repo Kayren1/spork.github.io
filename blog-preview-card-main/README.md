@@ -44,17 +44,50 @@ Users should be able to:
 
 ### What I Learned
 
-This project helped me practice structuring HTML and styling with CSS. I also learned how to implement hover and focus states for interactive elements. Below is an example of a CSS snippet I used:
+This project helped me practice structuring HTML and styling with SCSS. I also learned how to implement hover and focus states for interactive elements. Below is an example of a CSS snippet I used:
 
 ```css
-a {
-  color: hsl(0, 0%, 7%);
-  font-weight: 700;
-  transition: color 0.3s ease-in-out;
+footer {
+    margin-top: 5rem;
+    position: relative;
+    top: 100%;
 }
 
-a:hover {
-  color: hsl(47, 88%, 63%);
+@media screen and (max-width: 768px) {
+    main {
+        width: 100%;
+    }
+
+    .card {
+        height: auto;
+        padding: 10px;
+    }
+
+    .card-shadow {
+        height: auto;
+    }
+
+    .blog-img img {
+        width: 100%;
+    }
+
+    footer {
+        margin-top: 5rem;
+        position: relative;
+        top: 100%;
+    }
+    
+    .blog-title h1 {
+        font-size: $font-med;
+    }
+    
+}
+
+@font-face {
+    font-family: 'Figtree';
+    src: url('assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: regular;
 }
 ```
 
@@ -63,8 +96,8 @@ a:hover {
 In future projects, I want to focus on:
 
 - Improving accessibility by ensuring all interactive elements are keyboard-navigable.
-- Using CSS Grid for more complex layouts.
-- Exploring CSS animations for hover effects.
+- Using SCSS Grid for more complex layouts.
+- Exploring SCSS animations for hover effects.
 
 ### Useful Resources
 
