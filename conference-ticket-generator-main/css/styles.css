@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -29,28 +30,28 @@
 }
 
 body {
+  min-height: 100vh;
   background: url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/pattern-circle.svg) no-repeat 35px -95px, url(/conference-ticket-generator-main/assets/images/pattern-circle.svg) no-repeat 82% 60%, url(/conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg) no-repeat 100% 10%, url(/conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-desktop.svg) no-repeat 0 100%, url(/conference-ticket-generator-main/assets/images/background-desktop.png) center/cover no-repeat;
-  font-family: "Roboto", sans-serif;
+  font-family: "Inter", sans-serif;
   color: white;
   line-height: 1.5;
 }
 
 @media (max-width: 768px) {
   body {
-    background: url(/conference-ticket-generator-main/assets/images/background-tablet.png) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat;
+    background: url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/pattern-circle.svg) no-repeat 35px -95px, url(/conference-ticket-generator-main/assets/images/pattern-circle.svg) no-repeat 82% 60%, url(/conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg) no-repeat 100% 10%, url(/conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg) no-repeat 0 100%, url(/conference-ticket-generator-main/assets/images/background-tablet.png) center/cover no-repeat;
   }
 }
 @media (max-width: 480px) {
   body {
-    background: url(/conference-ticket-generator-main/assets/images/background-mobile.png) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat;
+    background: url(/conference-ticket-generator-main/assets/images/pattern-lines.svg) center/cover no-repeat, url(/conference-ticket-generator-main/assets/images/pattern-circle.svg) no-repeat 35px -95px, url(/conference-ticket-generator-main/assets/images/pattern-circle.svg) no-repeat 82% 60%, url(/conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg) no-repeat 100% 10%, url(/conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg) no-repeat 0 100%, url(/conference-ticket-generator-main/assets/images/background-mobile.png) center/cover no-repeat;
   }
 }
 main {
   display: flex;
   flex-direction: column;
-  font-family: "figtree";
+  font-family: "Courier New", Courier, monospace;
   width: 100vw;
-  height: 87vh;
   line-height: 1.5;
   justify-content: center;
   align-items: center;
@@ -76,11 +77,29 @@ header {
   line-height: 1.2;
 }
 .headline h1 {
-  font-size: 54px;
+  font-size: 58px;
+}
+.headline h1 span {
+  background: linear-gradient(200deg, #ffffff, #fd7b54);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 .headline p {
   padding: 15px;
-  font-size: 24px;
+  font-size: 1.5rem;
+}
+.headline p span {
+  color: hsl(7, 81%, 62%);
+}
+@media (max-width: 480px) {
+  .headline h1 {
+    font-size: 2.375rem;
+  }
+  .headline p {
+    font-size: 1.125rem;
+  }
 }
 
 .logo {
@@ -92,17 +111,16 @@ form {
   flex-direction: column;
 }
 form span {
+  display: flex;
   font-size: 0.625rem;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
-form span img {
-  position: relative;
-  top: 2.2px;
+form span .colorized {
+  filter: brightness(0) saturate(100%) invert(50%) sepia(100%) hue-rotate(320deg) saturate(600%) brightness(90%);
 }
 form .get-input {
   width: 400px;
   padding: 15px;
-  margin-bottom: 30px;
   background-color: hsla(0, 0%, 100%, 0.137);
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
@@ -112,6 +130,16 @@ form .get-input {
 form .get-input:hover {
   outline: 2px solid hsla(0, 0%, 100%, 0.788);
   background-color: hsla(0, 0%, 100%, 0.329);
+}
+form .get-input:focus {
+  outline-offset: 2px;
+}
+@media (max-width: 480px) {
+  form .get-input {
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+  }
 }
 form .generate {
   background-color: hsl(7, 81%, 62%);
@@ -125,7 +153,42 @@ form .generate:hover {
 }
 form .generate:focus {
   outline: 1px solid hsla(0, 0%, 100%, 0.788);
+  outline-offset: 2px;
   box-shadow: 0 0 3px 2px rgba(0, 123, 255, 0.5);
+}
+
+.sustain {
+  height: 133px;
+}
+.sustain .cover {
+  position: absolute;
+}
+.sustain .cover .avatarbtn {
+  position: relative;
+  left: 100px;
+  bottom: 40px;
+  gap: 5px;
+}
+.sustain .cover button {
+  border-radius: 2px;
+  border: 0;
+  padding: 2px;
+  font-size: 0.75rem;
+  font-family: "Courier New", Courier, monospace;
+  background-color: hsla(0, 0%, 100%, 0.137);
+  color: hsla(0, 0%, 100%, 0.788);
+}
+.sustain .cover button:hover {
+  text-decoration: underline;
+  box-shadow: 0 0 3px 2px hsla(0, 0%, 7%, 0.185);
+}
+@media (max-width: 480px) {
+  .sustain .cover .avatarbtn {
+    position: relative;
+    left: 54px;
+    bottom: 40px;
+    gap: 5px;
+  }
 }
 
 .form-upload {
@@ -145,11 +208,23 @@ form .generate:focus {
 .form-upload .get-avatar[type=file] {
   display: none;
 }
-.form-upload:hover {
+.form-upload:hover, .form-upload.dragover {
   background-color: hsla(0, 0%, 100%, 0.329);
 }
-.form-upload:focus {
+.form-upload:focus, .form-upload.dragover {
   outline: 1px solid hsla(0, 0%, 100%, 0.788);
+  outline-offset: 2px;
+}
+@media (max-width: 480px) {
+  .form-upload {
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    min-height: 130px;
+  }
+  .form-upload #uploadtext {
+    font-size: 0.75rem;
+  }
 }
 
 .upload-icon {
@@ -161,12 +236,24 @@ form .generate:focus {
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
   border-radius: 10px;
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
+}
+.upload-icon #userimage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
 }
 .upload-icon img {
   width: 35px;
   height: 35px;
+}
+@media (max-width: 480px) {
+  .upload-icon {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .avatar-preview {
@@ -208,13 +295,26 @@ label {
   height: 280px;
   padding: 25px;
 }
+@media (max-width: 480px) {
+  .generated-ticket {
+    background: url("/conference-ticket-generator-main/assets/images/pattern-ticket.svg") center/cover no-repeat;
+    width: 300px;
+    height: 140px;
+    padding: 10px;
+  }
+}
 
 .ticket-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 50%;
+  min-height: 500px;
+}
+@media (max-width: 480px) {
+  .ticket-container {
+    min-height: 100px;
+  }
 }
 
 .ticket-col-1 {
@@ -223,10 +323,15 @@ label {
   justify-content: space-between;
   width: 300px;
 }
+@media (max-width: 480px) {
+  .ticket-col-1 {
+    width: 235px;
+  }
+}
 
 .ticket-col-2 {
   display: flex;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   width: 50px;
   text-align: center;
   color: hsla(0, 0%, 100%, 0.788);
@@ -235,12 +340,25 @@ label {
   writing-mode: vertical-lr;
   transform: rotate(0deg);
 }
+@media (max-width: 480px) {
+  .ticket-col-2 {
+    font-size: 0.75rem;
+    width: 30px;
+  }
+}
 
 .ticket-text {
   display: flex;
 }
 .ticket-text h2 {
+  font-size: 2rem;
   padding-left: 20px;
+}
+@media (max-width: 480px) {
+  .ticket-text h2 {
+    font-size: 1.125rem;
+    padding-left: 6px;
+  }
 }
 
 .ticket-avatar {
@@ -252,12 +370,26 @@ label {
   width: 100%;
   height: 100%;
 }
+@media (max-width: 480px) {
+  .ticket-avatar {
+    width: 55px;
+    height: 55px;
+  }
+}
 
 .ticket-info {
   line-height: 1;
 }
 .ticket-info p {
   padding-left: 60px;
+}
+@media (max-width: 480px) {
+  .ticket-info p {
+    font-size: 0.75rem;
+    padding-left: 45px;
+    position: relative;
+    bottom: 10px;
+  }
 }
 
 .ticket-end {
@@ -268,19 +400,34 @@ label {
   margin-left: 15px;
 }
 .ticket-user h3 {
-  padding: 5px;
+  font-size: 1.5rem;
 }
-.ticket-user p {
-  text-align: center;
+.ticket-user span {
+  display: flex;
 }
-.ticket-user img {
-  position: relative;
-  padding-right: 5px;
-  top: 5px;
+@media (max-width: 480px) {
+  .ticket-user {
+    margin-left: 5px;
+  }
+  .ticket-user h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+}
+
+.error-red {
+  color: #e53e3e;
+  outline: 1px solid #e53e3e;
+  outline-offset: 2px;
+}
+
+.error-message {
+  color: #e53e3e;
+  display: none;
 }
 
 .attribution {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -289,12 +436,13 @@ label {
 }
 
 a {
-  color: hsl(0, 0%, 7%);
+  color: hsl(251, 65%, 3%);
   font-weight: 700;
   transition: color 0.3s ease-in-out;
 }
 
 footer {
-  position: relative;
-  top: 90%;
+  position: sticky;
+  margin-top: 70px;
+  top: 100%;
 }/*# sourceMappingURL=styles.css.map */
