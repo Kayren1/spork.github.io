@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../static/fonts/Inconsolata-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../static/fonts/Inconsolata-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../static/fonts/Inconsolata-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inconsolata";
+  src: url("../static/fonts/Inconsolata-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
 * {
   margin: 0;
   padding: 0;
@@ -80,7 +104,7 @@ header {
   font-size: 58px;
 }
 .headline h1 span {
-  background: linear-gradient(200deg, #ffffff, #fd7b54);
+  background: linear-gradient(200deg, #ffffff, #ff6767);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -158,7 +182,7 @@ form .generate:focus {
 }
 
 .sustain {
-  height: 133px;
+  height: 140px;
 }
 .sustain .cover {
   position: absolute;
@@ -321,7 +345,7 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 300px;
+  width: 350px;
 }
 @media (max-width: 480px) {
   .ticket-col-1 {

@@ -1,127 +1,135 @@
-// styles.scss
+// ===========================
+// FONTS
+// ===========================
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-// Colors
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../static/fonts/Inconsolata-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../static/fonts/Inconsolata-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../static/fonts/Inconsolata-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url('../static/fonts/Inconsolata-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+// ===========================
+// COLORS
+// ===========================
 $red: hsl(7, 81%, 62%);
-$White1: hsla(0, 0%, 100%, 0.788);
-$White: hsl(0, 0%, 100%);
+$white: hsl(0, 0%, 100%);
+$white-soft: hsla(0, 0%, 100%, 0.788);
 $dark: hsl(251, 65%, 3%);
 $bg-hover: hsla(0, 0%, 100%, 0.329);
-$Dark-Gray: hsla(0, 0%, 7%, 0.185);
-$Dark-Violet: hsl(283, 51%, 48%);
+$dark-gray: hsla(0, 0%, 7%, 0.185);
+$dark-violet: hsl(283, 51%, 48%);
 $grayish-blue: hsl(228, 45%, 44%);
-$primary-color: hsl(0, 0%, 100%);
+$primary-color: $white;
 $secondary-color: hsla(0, 0%, 100%, 0.137);
-$accent-color: hsl(207, 73%, 57%);
-$border-color: hsla(0, 0%, 100%, 0.849);
 $accent-color: #4299e1;
+$border-color: hsla(0, 0%, 100%, 0.849);
 $error-color: #e53e3e;
 $success-color: #48bb78;
 
-// Font Sizes
-$font-xxsm: 0.5rem; // 8px
-$font-xsm: 0.625rem; // 10px
-$font-sm: 0.75rem; // 12px
-$font-xm: 0.875rem; // 14px
-$font-med: 1rem; // 16px
-$font-lg: 1.125rem; // 18px
-$font-xlg: 1.25rem; // 20px
-$font-xxlg: 1.5rem; // 24px
-$font-xxxlg: 2rem; // 32px
-$font-big: 2.375rem; // 38px
+// ===========================
+// FONT SIZES
+// ===========================
+$font-xxsm: 0.5rem;      // 8px
+$font-xsm: 0.625rem;     // 10px
+$font-sm: 0.75rem;       // 12px
+$font-xm: 0.875rem;      // 14px
+$font-med: 1rem;         // 16px
+$font-lg: 1.125rem;      // 18px
+$font-xlg: 1.25rem;      // 20px
+$font-xxlg: 1.5rem;      // 24px
+$font-xxxlg: 2rem;       // 32px
+$font-big: 2.375rem;     // 38px
 
-//Background Image Var
-$bg-image-desktop: '/conference-ticket-generator-main/assets/images/background-desktop.png';
-$bg-image-tablet: '/conference-ticket-generator-main/assets/images/background-tablet.png';
-$bg-image-mobile: '/conference-ticket-generator-main/assets/images/background-mobile.png';
-$bg-image-lines: '/conference-ticket-generator-main/assets/images/pattern-lines.svg';
-$bg-image-circle: '/conference-ticket-generator-main/assets/images/pattern-circle.svg';
-$bg-image-squiggly-1: '/conference-ticket-generator-main/assets/images/pattern-squiggly-line-top.svg';
-$bg-image-squiggly-2: '/conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-desktop.svg';
-$bg-squiggly-mobiletablet-2: '/conference-ticket-generator-main/assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg';
+// ===========================
+// BACKGROUND IMAGES
+// ===========================
+$bg-path: '/conference-ticket-generator-main/assets/images';
+$bg-image-desktop: '#{$bg-path}/background-desktop.png';
+$bg-image-tablet: '#{$bg-path}/background-tablet.png';
+$bg-image-mobile: '#{$bg-path}/background-mobile.png';
+$bg-image-lines: '#{$bg-path}/pattern-lines.svg';
+$bg-image-circle: '#{$bg-path}/pattern-circle.svg';
+$bg-image-squiggly-1: '#{$bg-path}/pattern-squiggly-line-top.svg';
+$bg-image-squiggly-2: '#{$bg-path}/pattern-squiggly-line-bottom-desktop.svg';
+$bg-squiggly-mobiletablet-2: '#{$bg-path}/pattern-squiggly-line-bottom-mobile-tablet.svg';
 
-
-//Size & Position
+// ===========================
+// SIZING & BREAKPOINTS
+// ===========================
 $repeat: no-repeat;
 $size: center/cover;
-
-// BREAKPOINTS
 $breakpoint-mobile: 480px;
 $breakpoint-tablet: 768px;
 
+// ===========================
+// RESET
+// ===========================
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.squiggly-1 {
-    position: absolute;
-    top: 7%;
-    right: 0%;
-}
-
-.squiggly-2 {
-    position: absolute;
-    bottom: 0%;
-    left: 0%;
-}
-
-.bg-circle1 {
-    position: absolute;
-    bottom: 90%;
-    left: 10%;
-}
-
-.bg-circle2 {
-    position: absolute;
-    top: 50%;
-    right: 15%;
-}
-
 body {
-    min-height: 100vh;
+  min-height: 100vh;
+  background: 
+    url(#{$bg-image-lines}) $size $repeat,
+    url(#{$bg-image-circle}) $repeat 35px -95px,
+    url(#{$bg-image-circle}) $repeat 82% 60%,
+    url(#{$bg-image-squiggly-1}) $repeat 100% 10%,
+    url(#{$bg-image-squiggly-2}) $repeat 0 100%,
+    url(#{$bg-image-desktop}) $size $repeat;
+  font-family: 'Inter', sans-serif;
+  color: $white;
+  line-height: 1.5;
+
+  @media (max-width: $breakpoint-tablet) {
     background: 
-        url(#{$bg-image-lines}) $size $repeat,
-        url(#{$bg-image-circle}) $repeat 35px -95px,
-        url(#{$bg-image-circle}) $repeat 82% 60%,
-        url(#{$bg-image-squiggly-1}) $repeat 100% 10%,
-        url(#{$bg-image-squiggly-2}) $repeat 0 100%,
-        url(#{$bg-image-desktop}) $size $repeat;
-        font-family: 'Inter', sans-serif;
-        color: white;
-        line-height: 1.5;;
-    }
-    
-    // Override for Tablet
-    @media (max-width: $breakpoint-tablet) {
-        body {
-            background: 
-            url(#{$bg-image-lines}) $size $repeat,
-            url(#{$bg-image-circle}) $repeat 35px -95px,
-            url(#{$bg-image-circle}) $repeat 82% 60%,
-            url(#{$bg-image-squiggly-1}) $repeat 100% 10%,
-            url(#{$bg-squiggly-mobiletablet-2}) $repeat 0 100%,
-            url(#{$bg-image-tablet}) $size $repeat;
-        }
-    }
-    
-    // Override for Mobile (smallest screens)
-    @media (max-width: $breakpoint-mobile) {
-        body {
-            background: 
-            url(#{$bg-image-lines}) $size $repeat,
-            url(#{$bg-image-circle}) $repeat 35px -95px,
-            url(#{$bg-image-circle}) $repeat 82% 60%,
-            url(#{$bg-image-squiggly-1}) $repeat 100% 10%,
-            url(#{$bg-squiggly-mobiletablet-2}) $repeat 0 100%,
-            url(#{$bg-image-mobile}) $size $repeat;
-    }
+      url(#{$bg-image-lines}) $size $repeat,
+      url(#{$bg-image-circle}) $repeat 35px -95px,
+      url(#{$bg-image-circle}) $repeat 82% 60%,
+      url(#{$bg-image-squiggly-1}) $repeat 100% 10%,
+      url(#{$bg-squiggly-mobiletablet-2}) $repeat 0 100%,
+      url(#{$bg-image-tablet}) $size $repeat;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    background: 
+      url(#{$bg-image-lines}) $size $repeat,
+      url(#{$bg-image-circle}) $repeat 35px -95px,
+      url(#{$bg-image-circle}) $repeat 82% 60%,
+      url(#{$bg-image-squiggly-1}) $repeat 100% 10%,
+      url(#{$bg-squiggly-mobiletablet-2}) $repeat 0 100%,
+      url(#{$bg-image-mobile}) $size $repeat;
+  }
 }
 
 main {
     display: flex;
     flex-direction: column;
-    font-family: 'Courier New', Courier, monospace;
     width: 100vw;
     line-height: 1.5;
     justify-content: center;
@@ -149,7 +157,7 @@ header {
     h1 {
         font-size: 58px;
         span {
-            background: linear-gradient(200deg, #ffffff, #fd7b54);
+            background: linear-gradient(200deg, #ffffff, #ff6767);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -227,7 +235,7 @@ form {
 }
 
 .sustain {
-    height: 133px;
+    height: 140px;
     .cover {
         position: absolute;
         .avatarbtn {
@@ -380,7 +388,7 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 300px;
+    width: 350px;
     @media (max-width: $breakpoint-mobile) {
         width: 235px;
     }
@@ -475,6 +483,12 @@ label {
 .error-message {
     color: $error-color;
     display: none;
+}
+
+.get-input[aria-invalid="true"] {
+    outline: 2px solid $error;
+    outline-offset: 2px;
+    border-color: transparent; 
 }
 
 .attribution {
