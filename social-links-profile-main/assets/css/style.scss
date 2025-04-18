@@ -1,0 +1,215 @@
+// Colors
+$White: hsl(0, 0%, 100%);
+$Green: hsl(75, 94%, 57%);
+$dim-gray: hsl(0, 0%, 42%);
+$dark-violet: hsl(283, 51%, 48%);
+$grayish-blue: hsl(229, 11%, 39%);
+$Grey-700: hsl(0, 0%, 20%);
+$Grey-800: hsl(0, 0%, 12%);
+$Grey-900: hsl(0, 0%, 8%);
+
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/static/Inter-Regular.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/static/Inter-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('/assets/fonts/static/Inter-SemiBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: SemiBold;
+}
+
+// Font Familie
+$font-family-mono: "Inter";
+
+// ===========================
+// BREAKPOINTS
+// ===========================
+$breakpoint-mobile: 375px;
+$breakpoint-tablet: 768px;
+
+
+// ===========================
+// FONT SIZES
+// ===========================
+$font-xxsm: 0.5rem;      // 8px
+$font-xsm: 0.625rem;     // 10px
+$font-sm: 0.75rem;       // 12px
+$font-xm: 0.875rem;      // 14px
+$font-med: 1rem;         // 16px
+$font-lg: 1.125rem;      // 18px
+$font-xlg: 1.25rem;      // 20px
+$font-xxlg: 1.5rem;      // 24px
+$font-xxxlg: 2rem;       // 32px
+$font-big: 2.375rem;     // 38px
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: block;
+    background-color: $Grey-900;
+    font-family: $font-family-mono;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    font-family: $font-family-mono;
+    width: 100%;
+    height: 90vh;
+    line-height: 1.5;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    background-color: $Grey-800;
+    color: $White;
+    border-radius: 20px;
+    padding: 30px 25px 25px 25px;
+    width: 380px;
+    height: 670px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 240px;
+    line-height: 1.4;
+    margin: 5px;
+    h1 {
+        font-size: $font-xxlg;
+        font-weight: 500;
+    }
+    p {
+        color: $Green;
+        font-weight: 600;
+        font-size: $font-xm;
+    }
+    img {
+        padding: 15px;
+        border-radius: 60px;
+        width: 120px;
+    }
+}
+
+
+
+.card-btns {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  
+    p {
+        font-size: $font-xm;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+  
+    .links-list {
+        padding: 10px;
+        list-style: none;
+  
+        li {
+            width: 330px;
+            height: 50px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            background-color: $Grey-700;
+            overflow: hidden;
+  
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
+                color: $White;
+                text-decoration: none;
+                transition: background-color 0.3s ease, color 0.3s ease;
+            }
+
+            &:focus {
+                outline: 2px solid $White;
+                outline-offset: 2px;
+            }
+  
+            &:hover {
+                background-color: $Green;
+          
+                a {
+                    color: $Grey-800;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.card-shadow {
+    width: 310px;
+    height: 430px;
+    border-radius: 15px;
+    background-color: black;
+}
+
+
+.attribution {
+    font-size: $font-sm;
+    text-align: center;
+    color: $White;
+}
+
+.attribution a:visited {
+    color: $dark-violet;
+}
+
+a {
+    color: $Grey-900;
+    font-weight: 700;
+    transition: color 0.3s ease-in-out;
+}
+
+footer {
+    margin-top: 5rem;
+    position: relative;
+    top: 100%;
+}
+
+@media (max-width: $breakpoint-mobile) {
+    main {
+        height: 100%;
+        width: 100%;
+        min-width: 300px;
+
+    }
+
+    .container {
+        height: 100%;
+        width: 100%;
+        min-width: 300px;
+        margin: 30px;
+    }
+}

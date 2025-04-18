@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("/assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: SemiBold;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: block;
+  background-color: hsl(0, 0%, 8%);
+  font-family: "Inter";
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  font-family: "Inter";
+  width: 100%;
+  height: 90vh;
+  line-height: 1.5;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  background-color: hsl(0, 0%, 12%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  padding: 30px 25px 25px 25px;
+  width: 380px;
+  height: 670px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 240px;
+  line-height: 1.4;
+  margin: 5px;
+}
+.profile h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.profile p {
+  color: hsl(75, 94%, 57%);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.profile img {
+  padding: 15px;
+  border-radius: 60px;
+  width: 120px;
+}
+
+.card-btns {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.card-btns p {
+  font-size: 0.875rem;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.card-btns .links-list {
+  padding: 10px;
+  list-style: none;
+}
+.card-btns .links-list li {
+  width: 330px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: hsl(0, 0%, 20%);
+  overflow: hidden;
+}
+.card-btns .links-list li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.card-btns .links-list li:focus {
+  outline: 2px solid hsl(0, 0%, 100%);
+  outline-offset: 2px;
+}
+.card-btns .links-list li:hover {
+  background-color: hsl(75, 94%, 57%);
+}
+.card-btns .links-list li:hover a {
+  color: hsl(0, 0%, 12%);
+  cursor: pointer;
+}
+
+.card-shadow {
+  width: 310px;
+  height: 430px;
+  border-radius: 15px;
+  background-color: black;
+}
+
+.attribution {
+  font-size: 0.75rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+.attribution a:visited {
+  color: hsl(283, 51%, 48%);
+}
+
+a {
+  color: hsl(0, 0%, 8%);
+  font-weight: 700;
+  transition: color 0.3s ease-in-out;
+}
+
+footer {
+  margin-top: 5rem;
+  position: relative;
+  top: 100%;
+}
+
+@media (max-width: 375px) {
+  main {
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+  }
+  .container {
+    height: 100%;
+    width: 100%;
+    min-width: 300px;
+    margin: 30px;
+  }
+}/*# sourceMappingURL=style.css.map */
