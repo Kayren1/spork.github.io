@@ -5,7 +5,7 @@
 - 💞️ I’m looking to collaborate on interactive web applications
 - 📫 How to reach me Allistersenzo@gmail.com...
 
-Frontend Mentor Challenge
+Frontend Mentor Challenge Solutions
 - https://kayren1.github.io/spork.github.io/qr-code-component/qrcode.html
 - https://kayren1.github.io/spork.github.io/blog-preview-card-main/index.html
 - https://kayren1.github.io/spork.github.io/social-links-profile-main/index.html
