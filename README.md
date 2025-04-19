@@ -1,9 +1,10 @@
 - 👋 Hi, I’m @Kayren1
 - 👀 I’m interested in Programming
-- 🌱 I’m currently learning Web Programming with Python and JavaScript
+- 🌱 I’m currently learning Frontend development with JavaScript, React, JQuery and Rest.
 - ✨ Im also a frontend developer at www.frontendmentor.io
-- 💞️ I’m looking to collaborate on interactive web applications
-- 📫 How to reach me Allistersenzo@gmail.com...
+- 💞️ I’m looking to collaborate on interactive UI for web applications
+- 📫 How to reach me Kwekuosabil@gmail.com...
+- 👍 
 
 Frontend Mentor Challenge Solutions
 - https://kayren1.github.io/spork.github.io/qr-code-component/qrcode.html
