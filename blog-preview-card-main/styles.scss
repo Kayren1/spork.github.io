@@ -88,13 +88,13 @@ main {
     position: relative;
     bottom: 0px;
     right: 0px;
+    .blog-title h1 {
+        color: $Gold-yellow;
+        cursor: pointer;
+        transition: color 0.3s ease-in-out;
+    }
 }
 
-.card,.blog-title h1:hover {
-    color: $Gold-yellow;
-    cursor: pointer;
-    transition: color 0.3s ease-in-out;
-}
  
 .card-shadow {
     width: 310px;

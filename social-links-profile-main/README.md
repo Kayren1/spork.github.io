@@ -22,6 +22,7 @@ This is my solution to the [Social Links Profile challenge on Frontend Mentor](h
 Users should be able to:
 
 - See hover and focus states for all interactive elements on the page.
+- Navigate the page using keyboard controls with proper focus management.
 
 ### Screenshot
 
@@ -31,8 +32,8 @@ Users should be able to:
 
 ### Links
 
-- [Solution URL](https://github.com/yourusername/social-links-profile-main)
-- [Live Site URL](https://yourusername.github.io/social-links-profile-main)
+- [Solution URL]()
+- [Live Site URL](https://kayren1.github.io/spork.github.io/social-links-profile-main/index.html)
 
 ## My process
 
@@ -43,6 +44,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Accessible ARIA roles and labels
 
 ### What I learned
 
@@ -61,6 +63,7 @@ This project helped me solidify my understanding of responsive design and hover/
 .social-link:focus {
   color: var(--primary-color);
   transform: scale(1.1);
+  outline: 2px solid var(--primary-color);
 }
 ```
 
@@ -71,14 +74,17 @@ In future projects, I want to focus on:
 - Improving accessibility by using ARIA roles and labels effectively.
 - Exploring advanced CSS animations for interactive elements.
 - Enhancing performance by optimizing assets and reducing unnecessary code.
+- Implementing light mode support for better user experience.
 
 ### Useful resources
 
 - [MDN Web Docs - CSS Grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) - Helped me understand how to structure the layout effectively.
 - [CSS Tricks - Hover States](https://css-tricks.com/almanac/selectors/h/hover/) - Provided insights into creating smooth hover effects.
+- [A11y Project - Focus Management](https://www.a11yproject.com/) - Helped me improve the accessibility of interactive elements.
 
 ## Author
 
 - Website - [Your Name](https://your-website.com)
 - Frontend Mentor - [@Kayren1](https://www.frontendmentor.io/profile/Kayren1)
 - GitHub - [@Kayren1](https://github.com/Kayren1)
+- LinkedIn - [Your Name](https://www.linkedin.com/in/your-profile)
